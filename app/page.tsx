@@ -1,113 +1,78 @@
+
+import React from "react";
 import Image from "next/image";
+import Images from "./utils/Images/page";
+import { Project } from "./utils/Project";
+import { Buttonlink } from "./Components/ButtonLink";
 
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="main">
+      <section className="introduction">
+        <div>
+            <h1>Build robust,SEO friendly React applications today</h1>
+            <p>Am <span className="colorBlue">Paul Njogu</span>, a software developer based in Kenya. Am passionate about creating well designed and fully functioning software applications</p>
+            <Buttonlink name="View my projects" link="/Projects"/>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <div>
+        <Image src={'/DV LOT.jpg'} alt="paul njogu picture" width='200' height='200' style={{width:'auto',height:'auto'}} />
+        </div>
+      </section>
+      <section className="homeImagesSection">
+          <Images />
+      </section>
+      <section className="homeWhatIdo">
+          <h2>What I do</h2>
+          <div>
+              <p>I build fullstack applications using above technologies with key consideration on intuitive user interfaces that result in great user experience and good SEO performance. Client&apos;s preferences superdes my jugdement. Continous communication is key to successful project completion</p>
+              <Image src={'/online.jpg'} alt="online picture" width='384' height='384' style={{width:'auto',height:'auto'}} />
+          </div>
+      </section>
+      <section className="homeThirdSec">
+          <h2>How I pertake projects</h2>
+          <section className="homeHowIdo">
+              <div>
+                  <h3>Client-Developer discussions</h3>
+                  <p>Entails getting project requirements and agreeing on contractual terms</p>
+              </div>
+              <div>
+                  <h3>Application Development</h3>
+                  <p>Actual design and code implementation. Periodic communication with the client to show progress</p>
+              </div>
+              <div>
+                  <h3>Software testing</h3>
+                  <p>Continous verification to check if the project is functioning as expected</p>
+              </div>
+              <div>
+                  <h3>Deployment and maintenance</h3>
+                  <p>Publishing the application to a web server and optional maintenance of codebase</p>
+              </div>
+          </section>
+      </section>
+      <section className="homeMyProjects">
+            <h2>My Projects</h2>
+            <p>Below are some of the projects I have undertaken</p>
+            <section>
+                <Project link="https://softhome-e8de2.web.app/" p="Softhome is a Real estate application that was built to allow landlords in Kitisuru area post vacant and land property pictures and secure prospecive clients. New version is underway" h="Softhome" lname="Softhome website"/>
+                <Project link="https://fastforty-importers-and-exporters.vercel.app/" p="Fastforty is a company which specializes in car importing and exporting based in Kenya. This application enables them to post new car arrivals and tap in to the large online presence" h="Fastforty" lname="Fastforty website"/>
+                <Project link="https://pnjogu-467d3.web.app" p="NPN website was my first react project built with create-react-app. NPN.DEV is fully next.js project" h="NPN" lname="NPN website"/>
+                <Project link="https://npn.netlify.app/" p="NPN was my first website developed using HTML5,CSS3, Vanilla javaScript and JQuery before shifting to using React framework" h="NPN" lname="NPN website"/>
+          
+            </section>
+      </section>
+      <section className="homeContactme">
+          <h2>How to contact me</h2>
+          <p>Interested in procuring software development services? Kindly reach out to me. Let&apos;s craft your dream project to reality</p>
+          <Buttonlink name="Contact me" link="mailto:paulnjogu2006@gmail.com"/>
+      </section>
+      <section className="Review">
+            <div>
+                <h2>Client&apos;s reviews</h2>
+                <Buttonlink name="Add review" link="./Reviews"/>
+            </div>
+      </section>
+     
     </main>
   );
 }
