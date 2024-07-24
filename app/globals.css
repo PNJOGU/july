@@ -138,18 +138,19 @@ hr{
  justify-content: flex-start;
 }
 .loading{
-animation:loading 0.6s linear;
+animation:loading 10s linear infinite;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+font-size: 30px;
 }
 @keyframes loading {
   from{
     transform: rotate(0deg);
   }
   to{
-    transform: rotate(360);
+    transform: rotate(3600deg);
   }
 }
 .introduction h1{
@@ -186,9 +187,12 @@ justify-content: center;
 .homeImagesSection,.homeHowIdo > *,.aboutSecondSec ul,.aboutThirdSubSec > *{
   background-color: #ffffff;
 }
-.homeWhatIdo > div,.homeHowIdo,.homeMyProjects div,footer,.aboutFirstSec,.aboutSecondSec div,.aboutThirdSubSec,.aboutForthSec,.projectsection{
+.homeWhatIdo > div,.homeHowIdo,.homeMyProjects div,footer,.aboutFirstSec,.aboutSecondSec div,.aboutThirdSubSec,.aboutForthSec,.projectsection,.reviewPostList{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(min(300px,90%),1fr));
+}
+.projectsection{
+  gap: var(--gap2);
 }
 .projectsmain p,.homeMyProjects p{
   text-align: center;
@@ -354,6 +358,50 @@ margin-bottom: var(--marginTop);
   border: 1px solid #ffffff;
   color: #ffffff;
   width:10rem;
+}
+.homeReviews{
+  display: flex;
+  flex-direction: column;
+}
+.homeReviews div{
+  display: flex;
+  justify-content: end;
+}
+.homeReviews p{
+  align-self: center;
+  color: var(--blue);
+}
+.homeReviews p:hover{
+  text-decoration: underline;
+}
+.reviewform{
+  background-color: #ffffff;
+  width:min(90%,400px);
+}
+.reviewform label,input,textarea{
+  display: block;
+  width: 100%;
+}
+.reviewPostList{
+  gap:var(--gap2);
+}
+.reviewPostList li,.reviewli{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--lightBlue);
+  width:300px;
+  padding: var(--padding2);
+  align-items: center;
+  color: #1b1b1b;
+  list-style-type: none;
+  background-color: var(--lightBlue);
+}
+.reviewPostList li h2,.reviewli h2{
+  color: #ffffff;
+}
+textarea{
+  border: 1px solid rgba(0, 0, 0, 0.165);
+  resize: none;
 }
 footer section{
   display: flex;
